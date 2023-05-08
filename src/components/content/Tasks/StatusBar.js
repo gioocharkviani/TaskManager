@@ -5,7 +5,7 @@ import Threedots from  '../../../assets/threedots.svg'
 
 const StatusBar = (props) => {
   return (
-    <div key={props.key} onDragEnter={props.onDragEnter} className='flex gap-[10px] min-w-[280px] flex-col h-auto bg-[#d8e3f6] rounded-[10px] p-[15px]'>
+    <div onDragEnter={props.onDragEnter} className='flex gap-[10px] min-w-[280px] flex-col h-auto bg-[#d8e3f6] rounded-[10px] p-[15px]'>
 
     <div style={{background: props.color}} className={`flex justify-between gap-[15px] px-[8px] py-[8px] rounded-[3px] text-[white]`}>
     <div className='flex gap-2'>

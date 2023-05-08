@@ -8,7 +8,7 @@ import Clock from '../../../assets/clock.svg'
 const TaskCard = (props) => {
 
   return (
-    <div key={props.key} className={`${props.style}  flex flex-col gap-[5px] p-[10px] rounded-[5px]`} onDragEnter={props.onDragEnter} draggable onDragStart={props.onDragStart} >
+    <div className={`${props.style}  flex flex-col gap-[5px] p-[10px] rounded-[5px]`} onDragEnter={props.onDragEnter} draggable onDragStart={props.onDragStart} >
             
       <header>
         <h2 className='text-[15px] font-bold'>{props.title}</h2>

@@ -40,8 +40,3 @@
   .dragging-task {
     background: #ffff;
   }
-
-  .CurrentTask {
-    background: #d8e3f6;
-    opacity: 0;
-  }

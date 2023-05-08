@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react'
+import {v4 as uuidV4} from 'uuid'
 
 import StatusBar from './StatusBar';
 import TaskCard from './TaskCard';
@@ -39,7 +40,7 @@ function DragNDrop({data}) {
             })
         }
     }
-    const handleDragEnd = (e) => {
+    const handleDragEnd = () => {
         setDragging(false);
         dragItem.current = null;
         dragItemNode.current.removeEventListener('dragend', handleDragEnd)
@@ -57,7 +58,7 @@ function DragNDrop({data}) {
             <>
             {list.map((grp, grpI) => (
               <StatusBar 
-                key={grp.title} 
+                key={uuidV4()} 
                 onDragEnter={dragging && !grp.items.length?(e) => handleDragEnter(e,{grpI, itemI: 0}):null} 
                 style="dnd-group"
                 title={grp.title}
@@ -67,7 +68,7 @@ function DragNDrop({data}) {
                 {grp.items.map((item, itemI) => (
                   <TaskCard
                   title={item.title}
-                  key={item} 
+                  key={uuidV4()}  
                   desc={item.description} 
                   onDragStart={(e) => handletDragStart(e, {grpI, itemI})} 
                   onDragEnter={dragging?(e) => {handleDragEnter(e, {grpI, itemI})}:null} 
