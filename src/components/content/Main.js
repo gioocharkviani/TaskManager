@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Navbar from '../aside/Navbar/Navbar';
 import Space from './Space/Space';
 import Projects from './Projects/Projects';
+import DndTasks from './Dnd/DndTasks';
 
-import Tasks from '../content/Tasks/Tasks'
 
 const Main = () => {
   const [activeLink, setActiveLink] = useState('space');
@@ -21,9 +21,9 @@ const Main = () => {
         </div>
         
         <div className='w-[92%]  relative'>
-          {activeLink === 'Tasks' && <Tasks />}
           {activeLink === 'space' && <Space />}
           {activeLink === 'projects' && <Projects />}
+          {activeLink === 'DndTasks' && <DndTasks />}
         </div>
       </div>
     </div>

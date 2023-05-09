@@ -27,10 +27,10 @@ const Navbar = (props) => {
           />
 
           <NavLinks
-            navlink={() => props.onNavlinkClick('Tasks')}
+            navlink={() => props.onNavlinkClick('DndTasks')}
             imglink={SpaceSvg}
             imgalt='Tasks'
-            active={props.activeLink === 'Tasks'}
+            active={props.activeLink === 'DndTasks'}
           />
           
         </ul>
