@@ -29,5 +29,15 @@ import {v4 as uuid} from 'uuid'
           name: "Done",
           color: '#50e300' ,
           items: []
-        }
+        }  ,
+        [uuid()]: {
+          name: "Done",
+          color: '#50e300' ,
+          items: []
+        },
+        [uuid()]: {
+          name: "Done",
+          color: '#50e300' ,
+          items: []
+        } 
   };

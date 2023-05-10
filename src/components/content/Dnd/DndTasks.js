@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import {v4 as uuid} from "uuid";
 import { columnsFromBackend } from "./data";
 
 import StatusBar from "./StatusBar";
@@ -49,24 +48,23 @@ function App() {
   const [columns, setColumns] = useState(columnsFromBackend);
   console.log(columns);
   return (
-    <div className="flex  gap-[20px]">
+    <div className="flex  gap-[20px] w-full " >
       <DragDropContext
         onDragEnd={result => onDragEnd(result, columns, setColumns)}
       >
         {Object.entries(columns).map(([columnId, column], index) => {
-            console.log(column)
           return (
             <div key={columnId}  className="bg-[#d8e3f6] flex flex-col">
             <StatusBar title={column.name} color={column.color}/>
-              <div className="m-[8px]">
-                <Droppable droppableId={columnId} key={columnId}>
+              <div className="m-[8px] ">
+                <Droppable droppableId={columnId} key={columnId} >
                   {(provided, snapshot) => {
                     return (
                       <div
                         {...provided.droppableProps}
                         ref={provided.innerRef}
                         style={{background: snapshot.isDraggingOver ? "#9ab6e8": "#d8e3f6" }}
-                        className="flex flex-col min-w-[250px]"
+                        className="flex flex-col min-w-[250px]  min-h-[100px]"
                       >
                         {column.items.map((item, index) => {
                           return (

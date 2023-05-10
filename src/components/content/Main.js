@@ -20,7 +20,7 @@ const Main = () => {
           <Navbar onNavlinkClick={handleNavlinkClick} activeLink={activeLink} />
         </div>
         
-        <div className='w-[92%]  relative'>
+        <div className='w-[92%] overflow-x-auto'>
           {activeLink === 'space' && <Space />}
           {activeLink === 'projects' && <Projects />}
           {activeLink === 'DndTasks' && <DndTasks />}
