@@ -21,6 +21,7 @@ let LoginUserInfo = {
 const EmailHandler = (e) =>{
     SetEmail(e.target.value)
 }
+
 const passwordHandler = (e) =>{
     SetPasword(e.target.value)
 }

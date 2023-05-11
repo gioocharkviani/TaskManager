@@ -44,11 +44,11 @@ const onDragEnd = (result, columns, setColumns) => {
   }
 };
 
-function App() {
+function DndTasks() {
   const [columns, setColumns] = useState(columnsFromBackend);
   console.log(columns);
   return (
-    <div className="flex  gap-[20px] w-full " >
+    <div className="flex  gap-[20px] w-full  overflow-x-auto" >
       <DragDropContext
         onDragEnd={result => onDragEnd(result, columns, setColumns)}
       >
@@ -72,7 +72,7 @@ function App() {
                               {(provided, snapshot) => {
                                 return (
                                   <div className="mb-[10px]" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} >
-                                    <TaskCard title={item.content}/>
+                                    <TaskCard desc={item.content.descirption} title={item.content.title}/>
                                   </div>
                                 );
                               }}
@@ -93,4 +93,4 @@ function App() {
   );
 }
 
-export default App;
+export default DndTasks;
