@@ -27,9 +27,6 @@ const passwordHandler = (e) =>{
 }
 const LoginuserInfoHandler = (event) =>{
     event.preventDefault()
-    console.log(LoginUserInfo);
-    SetPasword('')
-    SetEmail('')
 }
 // Login User INfO
 
@@ -53,8 +50,6 @@ const ConfirmpasswordHandler = (e) =>{
 const SignUpuserInfoHandler = (event) =>{
     event.preventDefault()
     console.log(SignUpUserInfo);
-    SetconfirmPasword('')
-    SetEmail('')
 }
 //Sign Up Info
 
