@@ -28,4 +28,10 @@ import {v4 as uuid} from 'uuid'
           color: '#50e300' ,
           items: []
         } 
+        ,
+        [uuid()]: {
+          name: "Blocked",
+          color: 'red' ,
+          items: []
+        } 
   };

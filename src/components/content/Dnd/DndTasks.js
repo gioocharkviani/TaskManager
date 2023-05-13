@@ -11,6 +11,7 @@ function DndTasks() {
 
   const [columns, setColumns] = useState(columnsFromBackend);
 
+  console.log(columns);
 
 
 //Search Filter  
